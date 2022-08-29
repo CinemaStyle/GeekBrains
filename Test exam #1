@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Функция копирования массива
+
 char	ft_copy_str(char *str1, char *str2)
 {
 	int i;
@@ -14,12 +16,13 @@ char	ft_copy_str(char *str1, char *str2)
 	return(str2);
 }
 
+//Проверка копии на соответсвие
+
 char	ft_test_copy_str(char *str1, char *str2)
 {
 	int i;
 	
 	i = 0;
-	ft_copy_str(str1, str2);
 	while(str1[i])
 	{
 		if (str2[i] == str1[i])
@@ -35,11 +38,14 @@ char	ft_test_copy_str(char *str1, char *str2)
 	printf("Тест пройден\n");
 }
 
+//Исходные данные поддающиеся изменению для проверки работоспособности программы
+
 int	main(void) 
 {
 	char str1[11] = "3, 3, 5, 7";
 	char str2[11] = "";
 	
+	ft_copy_str(str1, str2);
 	ft_test_copy_str(str1, str2);
 	return 0;
 }
